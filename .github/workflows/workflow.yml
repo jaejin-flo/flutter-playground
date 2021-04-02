@@ -28,8 +28,8 @@ jobs:
           git config --global user.name jaejin-flo
           git status
           # 5. change your repository
-          git remote add origin https://${{secrets.commit_secret}}@github.com/jaejin-flo/flutter-playground.git
-          git checkout -b gh-pages
+          git remote add origin https://${{secrets.commit_secret}}@github.com/jaejin-flo/jaejin-flo.github.io.git
+          git checkout -b master
           git add --all
           git commit -m "update"
-          git push origin gh-pages -f
+          git push origin master -f
