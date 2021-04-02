@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:playground/src/pages/game.dart';
 
 import '../widgets/dialogs.dart';
 import '../widgets/third_party/adaptive_scaffold.dart';
@@ -42,6 +43,7 @@ class _HomePageState extends State<HomePage> {
         AdaptiveScaffoldDestination(title: 'Home', icon: Icons.home),
         AdaptiveScaffoldDestination(title: 'Entries', icon: Icons.list),
         AdaptiveScaffoldDestination(title: 'Settings', icon: Icons.settings),
+        AdaptiveScaffoldDestination(title: 'Test', icon: Icons.videogame_asset),
       ],
       body: _pageAtIndex(_pageIndex),
       onNavigationIndexChange: (newIndex) {
@@ -120,6 +122,10 @@ class _HomePageState extends State<HomePage> {
 
     if (index == 1) {
       return EntriesPage();
+    }
+
+    if (index == 3) {
+      return GamePage();
     }
 
     return Center(child: Text('Settings page'));
