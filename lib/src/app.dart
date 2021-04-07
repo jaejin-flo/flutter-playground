@@ -32,16 +32,16 @@ typedef DashboardApi ApiBuilder(User user);
 class DashboardApp extends StatefulWidget {
   static ApiBuilder _mockApiBuilder =
       (user) => MockDashboardApi()..fillWithMockData();
-  static ApiBuilder _apiBuilder =
-      (user) => FirebaseDashboardApi(Firestore.instance, user.uid);
+  // static ApiBuilder _apiBuilder =
+  //     (user) => FirebaseDashboardApi(Firestore.instance, user.uid);
 
   final Auth auth;
   final ApiBuilder apiBuilder;
 
   /// Runs the app using Firebase
-  DashboardApp.firebase()
-      : auth = FirebaseAuthService(),
-        apiBuilder = _apiBuilder;
+  // DashboardApp.firebase()
+  //     : auth = FirebaseAuthService(),
+  //       apiBuilder = _apiBuilder;
 
   /// Runs the app using mock data
   DashboardApp.mock()
